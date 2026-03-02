@@ -1,11 +1,12 @@
+import { ArrowRight, Briefcase, CheckCircle2, ShieldCheck, Timer } from "lucide-react";
+import Link from "next/link";
+
 const expertAccess = [
   "First-hand insights from former or current industry professionals",
   "Company-specific perspectives (former employees, competitors, suppliers, distributors)",
   "Market landscape understanding from experienced operators",
   "Functional expertise (sales, operations, supply chain, product, pricing)",
   "Geographic-specific industry knowledge",
-  "Channel checks and ecosystem perspectives",
-  "Validation of market assumptions and industry trends",
   "Hard-to-access executive profiles and niche specialists",
 ];
 
@@ -22,13 +23,38 @@ const role = [
 export default function HomePage() {
   return (
     <div className="stack-xl">
-      <section className="hero card">
-        <p className="eyebrow">Fast, Reliable Expert Insights</p>
-        <h1>Saga Connect+</h1>
-        <p className="lead">
-          We connect consulting firms, private equity investors, and corporate strategy teams
-          with carefully selected industry experts — quickly, discreetly, and with precision.
-        </p>
+      <section className="hero-banner">
+        <div className="hero-content">
+          <p className="eyebrow">Fast, Reliable Expert Insights</p>
+          <h1>Saga Connect+</h1>
+          <p className="lead">
+            Expert insights and connections for critical business decisions. We connect
+            consulting firms, private equity investors, and corporate strategy teams with
+            carefully selected industry experts — quickly, discreetly, and with precision.
+          </p>
+          <div className="hero-cta-row">
+            <Link href="/contact" className="btn-primary">
+              Start a Project <ArrowRight size={16} />
+            </Link>
+            <Link href="/services" className="btn-secondary">
+              Explore Services
+            </Link>
+          </div>
+        </div>
+        <div className="hero-stats">
+          <div className="mini-card">
+            <Timer size={18} />
+            <span>Speed without compromise</span>
+          </div>
+          <div className="mini-card">
+            <ShieldCheck size={18} />
+            <span>Confidential & compliant process</span>
+          </div>
+          <div className="mini-card">
+            <Briefcase size={18} />
+            <span>Senior-led project execution</span>
+          </div>
+        </div>
       </section>
 
       <section className="card stack-md">
@@ -38,45 +64,34 @@ export default function HomePage() {
           management and strategy consulting veterans. We support consulting firms,
           investment teams, and corporate leaders during high-stakes decisions.
         </p>
-        <p>
-          We manage the full process from understanding your research objective to expert
-          matching, scheduling, discussion guide development, compliance oversight, and
-          conducting interviews.
-        </p>
       </section>
 
       <section className="card stack-md">
         <h2>What We Do</h2>
         <p>
-          Saga Connect+ is an end-to-end expert networking agency that facilitates access to
-          carefully selected industry professionals for structured, one-on-one consultations.
+          We provide end-to-end support from expert sourcing to interview execution, helping
+          clients extract validated insights without friction.
         </p>
         <h3>We Facilitate Expert Access For</h3>
-        <ul>{expertAccess.map((item) => <li key={item}>{item}</li>)}</ul>
+        <ul className="icon-list">
+          {expertAccess.map((item) => (
+            <li key={item}>
+              <CheckCircle2 size={16} />
+              {item}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="card stack-md">
         <h2>Our Role</h2>
-        <ul>{role.map((item) => <li key={item}>{item}</li>)}</ul>
-        <p className="highlight">
-          Saga Connect+ facilitates the connection and interviewing. The client receives
-          ready-to-use validated insights.
-        </p>
-      </section>
-
-      <section className="card stack-md">
-        <h2>Why Clients Work With Us</h2>
-        <ul>
-          <li>Precision Matching — Carefully screened experts aligned to your objective.</li>
-          <li>Speed Without Compromise — Short turnaround times with maintained quality.</li>
-          <li>Senior-Led Process — Direct communication and accountability.</li>
-          <li>Confidential &amp; Compliant — Structured compliance for professional engagements.</li>
-        </ul>
-        <h3>Who We Serve</h3>
-        <ul>
-          <li>Strategy consulting firms</li>
-          <li>Private equity and investment firms</li>
-          <li>Corporate strategy and business development teams</li>
+        <ul className="icon-list">
+          {role.map((item) => (
+            <li key={item}>
+              <CheckCircle2 size={16} />
+              {item}
+            </li>
+          ))}
         </ul>
       </section>
     </div>
