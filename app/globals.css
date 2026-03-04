@@ -182,6 +182,22 @@ main.container {
   vertical-align: text-bottom;
 }
 
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.nav-shell {
+  display: contents;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -212,6 +228,7 @@ main.container {
 }
 
 .nav-list a {
+  position: relative;
   padding: 0.65rem 0.95rem;
   border-radius: 999px;
   color: var(--muted);
@@ -225,6 +242,25 @@ main.container {
   background: rgba(255, 255, 255, 0.06);
 }
 
+.nav-list a.active {
+  color: var(--text);
+}
+
+.nav-list a.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.28rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateX(-50%);
+  box-shadow:
+    0 -0.45rem 0 -0.16rem rgba(201, 168, 106, 0.9),
+    0 0 0 0.12rem rgba(201, 168, 106, 0.12);
+}
+
 .nav-cta,
 .btn-primary,
 .btn-secondary {
@@ -234,6 +270,10 @@ main.container {
   font-size: 0.94rem;
   font-weight: 800;
   line-height: 1;
+}
+
+.mobile-nav-cta {
+  display: none;
 }
 
 .nav-cta,
@@ -642,8 +682,7 @@ main.container {
 
 @media (max-width: 980px) {
   .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .hero-banner,
@@ -669,17 +708,57 @@ main.container {
   .navbar {
     padding: 1rem;
     align-items: stretch;
+    flex-wrap: wrap;
   }
 
-  .brand,
-  .nav-cta {
-    justify-content: center;
+  .brand {
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .desktop-nav-cta {
+    display: none;
+  }
+
+  .mobile-nav-cta {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .nav-shell {
+    display: none;
+    width: 100%;
+    padding-top: 0.85rem;
+  }
+
+  .nav-shell.is-open {
+    display: grid;
+    gap: 0.75rem;
   }
 
   .nav-list {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+    padding: 0.5rem;
     border-radius: 20px;
+  }
+
+  .nav-list a {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 14px;
+    padding-bottom: 1rem;
+  }
+
+  .nav-list a.active::after {
+    left: 1rem;
+    bottom: 0.35rem;
+    transform: none;
   }
 
   .hero-content h1 {
