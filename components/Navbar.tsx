@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BadgeCheck, Building2 } from "lucide-react";
+import { ArrowRight, BadgeCheck, Building2 } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -30,6 +30,9 @@ export function Navbar() {
             ))}
           </ul>
         </nav>
+        <Link href="/contact" className="nav-cta">
+          Book Intro Call <ArrowRight size={16} />
+        </Link>
       </div>
     </header>
   );
