@@ -3,7 +3,6 @@ import {
   Briefcase,
   CheckCircle2,
   Globe2,
-  Quote,
   ShieldCheck,
   Sparkles,
   Timer,
@@ -127,7 +126,6 @@ export default function HomePage() {
 
       <section className="card stack-lg">
         <div className="section-head">
-          <Sparkles size={18} />
           <div>
             <p className="section-kicker">What Makes The Platform Effective</p>
             <h2>Designed for sharper expert access</h2>
@@ -151,7 +149,6 @@ export default function HomePage() {
 
       <section className="card stack-lg">
         <div className="section-head">
-          <Briefcase size={18} />
           <div>
             <p className="section-kicker">Coverage</p>
             <h2>Expert access built around commercial relevance</h2>
@@ -169,7 +166,6 @@ export default function HomePage() {
 
       <section className="card stack-lg">
         <div className="section-head">
-          <ShieldCheck size={18} />
           <div>
             <p className="section-kicker">Operating Model</p>
             <h2>Clear, controlled execution from brief to call</h2>
@@ -187,7 +183,6 @@ export default function HomePage() {
 
       <section className="card stack-lg">
         <div className="section-head">
-          <Quote size={18} />
           <div>
             <p className="section-kicker">Proof & Client Feedback</p>
             <h2>Track record visible at a glance</h2>

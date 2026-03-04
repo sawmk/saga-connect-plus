@@ -25,7 +25,6 @@ export default function ClientsPage() {
   return (
     <div className="page-shell">
       <section className="sub-banner">
-        <BarChart3 size={18} />
         <div>
           <h1>Client Sectors &amp; Experience</h1>
           <p>
@@ -36,7 +35,6 @@ export default function ClientsPage() {
 
       <section className="card stack-lg">
         <div className="section-head">
-          <BarChart3 size={18} />
           <div>
             <p className="section-kicker">Track Record</p>
             <h2>Experience aligned with the most demanding use cases</h2>

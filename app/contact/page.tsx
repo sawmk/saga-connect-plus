@@ -43,7 +43,6 @@ export default function ContactPage() {
   return (
     <div className="page-shell">
       <section className="sub-banner">
-        <Mail size={18} />
         <div>
           <h1>Get in Touch</h1>
           <p>
@@ -57,7 +56,6 @@ export default function ContactPage() {
         <div className="contact-grid">
           <div className="stack-lg">
             <div className="section-head">
-              <Send size={18} />
               <div>
                 <p className="section-kicker">Project Intake</p>
                 <h2>Share a concise brief to start sourcing faster</h2>

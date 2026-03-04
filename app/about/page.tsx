@@ -1,4 +1,4 @@
-import { Compass, Gem, Handshake, Shield, Sparkles } from "lucide-react";
+import { Compass, Gem, Handshake, Shield } from "lucide-react";
 
 const differentiators = [
   {
@@ -35,7 +35,6 @@ export default function AboutPage() {
   return (
     <div className="page-shell">
       <section className="sub-banner">
-        <Sparkles size={18} />
         <div>
           <h1>About Saga Connect+</h1>
           <p>
@@ -47,7 +46,6 @@ export default function AboutPage() {
 
       <section className="card stack-lg">
         <div className="section-head">
-          <Sparkles size={18} />
           <div>
             <p className="section-kicker">Positioning</p>
             <h2>Built to operate like a high-trust research partner</h2>
@@ -71,7 +69,6 @@ export default function AboutPage() {
 
       <section className="card stack-lg">
         <div className="section-head">
-          <Compass size={18} />
           <div>
             <p className="section-kicker">Method</p>
             <h2>How engagements are executed</h2>

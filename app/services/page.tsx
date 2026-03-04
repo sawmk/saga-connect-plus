@@ -29,7 +29,6 @@ export default function ServicesPage() {
   return (
     <div className="page-shell">
       <section className="sub-banner">
-        <Headset size={18} />
         <div>
           <h1>Services</h1>
           <p>
@@ -41,7 +40,6 @@ export default function ServicesPage() {
 
       <section className="card stack-lg">
         <div className="section-head">
-          <Headset size={18} />
           <div>
             <p className="section-kicker">Solutions</p>
             <h2>Service models that adapt to the pace of your project</h2>
@@ -60,7 +58,6 @@ export default function ServicesPage() {
 
       <section className="card stack-lg">
         <div className="section-head">
-          <SearchCheck size={18} />
           <div>
             <p className="section-kicker">Delivery Standard</p>
             <h2>What clients can expect in every engagement</h2>
